@@ -12,9 +12,10 @@ if(num1%23==0 && num1%7==0)
     Console.WriteLine("Число не кратно 23 и 7!");
 }
 
+
 //Option 2
-int rem1 = firstNumber%23;
-int rem2 = firstNumber%7;
+int rem1 = num1%23;
+int rem2 = num1%7;
 
 string? result = (rem1 == 0 && rem2 == 0) ? "кратно":"Не Кратно";
 Console.WriteLine(result);
