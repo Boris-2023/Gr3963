@@ -3,15 +3,15 @@
 
 using System.Numerics;
 
+//read the data into int
 int ReadData(string msg)
 {
     Console.Write(msg);
     return(int.Parse(Console.ReadLine()??"0"));
 }
 
-
 //output the result
-void PrintAnswer(string explain, int num)
+void PrintAnswer(string explain, BigInteger num)
 {
     Console.WriteLine(explain + num);
 }
@@ -28,5 +28,5 @@ BigInteger FactSimple(int num)
 }
 
 int num = ReadData("Enter a value: ");
-Console.WriteLine($"The factorial of the value: {FactSimple(num)}");
+PrintAnswer("The factorial of the value: ", FactSimple(num));
 
