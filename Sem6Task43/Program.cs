@@ -2,6 +2,11 @@
 // Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 // * Найдите площадь треугольника образованного пересечением 3 прямых
 
+
+//constants for more convenience
+const int X = 0;
+const int Y = 1;
+
 //takes double value from console; replaces ',' with '.' if found
 double ReadDataToDbl(string msg)
 {
@@ -57,9 +62,9 @@ double[] crd13 = TwoLinesCrossCoord(b1, k1, b3, k3);
 double[] crd23 = TwoLinesCrossCoord(b2, k2, b3, k3);
 
 //find3 sides of triangle
-double side1 = TwoPtsDist(crd12[0], crd12[1], crd13[0], crd13[1]);
-double side2 = TwoPtsDist(crd12[0], crd12[1], crd23[0], crd23[1]);
-double side3 = TwoPtsDist(crd13[0], crd13[1], crd23[0], crd23[1]);
+double side1 = TwoPtsDist(crd12[X], crd12[Y], crd13[X], crd13[Y]);
+double side2 = TwoPtsDist(crd12[X], crd12[Y], crd23[X], crd23[Y]);
+double side3 = TwoPtsDist(crd13[X], crd13[Y], crd23[X], crd23[Y]);
 
 //finds the square of triangle
 PrintAnswerDbl("The square of triangle is: ", TriangleSquareBySides(side1,side2,side3), 3);
